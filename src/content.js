@@ -13,7 +13,7 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/jos%C3%A9-francisco-urdaneta-98914095/',
   linkedinHandle: '/josé-francisco-urdaneta',
   github: 'https://github.com/jfurdaneta',
-  site: 'https://jutechnologies.com',
+  site: 'https://www.jutechnologies.com',
 }
 
 // Términos técnicos que cambian entre idiomas. Los que no aparecen aquí
