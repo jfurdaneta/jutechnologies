@@ -1,0 +1,7 @@
+<!-- Glifo JU. Trazo dibujado, sin dependencia de fuentes: se ve igual en cualquier máquina. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="JU Technologies">
+  <g transform="translate(-2 2)" fill="none" stroke="currentColor" stroke-width="6.5" stroke-linecap="round">
+    <path d="M27 15 V37 A8 8 0 0 1 13 41"/>
+    <path d="M37 15 V35 A9 9 0 0 0 55 35 V15"/>
+  </g>
+</svg>
