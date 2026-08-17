@@ -181,9 +181,9 @@ c115 0 146 3 156 15 16 19 74 19 90 0 17 -20 103 -20 120 0 11 13 148 15 1125
   <g transform="translate(180, 0)">
     <text x="0" y="88" font-family="Inter" font-size="15" font-weight="600" fill="#2C4BCE" letter-spacing="2.9">JU TECHNOLOGIES</text>
     <text x="0" y="140" font-family="Inter" font-size="43" font-weight="700" fill="#0B1220" letter-spacing="-1.35">José Francisco Urdaneta</text>
-    <text x="0" y="178" font-family="Inter" font-size="18" font-weight="500" fill="#475569" letter-spacing="-0.15">Software Developer · Architect · Technology Operations Director</text>
+    <text x="0" y="178" font-family="Inter" font-size="18" font-weight="500" fill="#475569" letter-spacing="-0.15">Desarrollador · Arquitecto · Director de Operaciones Tecnológicas</text>
     <rect x="0" y="200" width="200" height="2.5" rx="1.25" fill="url(#rule)"/>
-    <text x="0" y="232" font-family="Inter" font-size="15" font-weight="500" fill="#64748B" letter-spacing="0.1">Digital Lending   ·   Agentic AI   ·   RAG   ·   Google Cloud   ·   React   ·   FastAPI</text>
+    <text x="0" y="232" font-family="Inter" font-size="15" font-weight="500" fill="#64748B" letter-spacing="0.1">Crédito digital   ·   IA agéntica   ·   RAG   ·   Google Cloud   ·   React   ·   FastAPI</text>
   </g>
 
   <g transform="translate(1052, 140)" opacity="0.92">

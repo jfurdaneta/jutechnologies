@@ -1,6 +1,7 @@
 import { useEffect, useState, useCallback } from 'react'
 import { content, profile, projectList, term } from './content.js'
 import { HeroVisual, ProjectVisual } from './visuals.jsx'
+import { track } from './analytics.js'
 
 /* Renderiza **negrita** y `código` dentro de un texto plano. */
 function rich(text) {
@@ -105,7 +106,9 @@ function Hero({ t }) {
             <div className="hero-actions">
               <a href="#work" className="btn btn-primary">{t.hero.ctaWork}</a>
               <a href="#contact" className="btn btn-ghost">{t.hero.ctaContact}</a>
-              <a href={t.lang === 'es' ? '/cv/CV_Jose_Urdaneta_ES.pdf' : '/cv/CV_Jose_Urdaneta_EN.pdf'} className="btn btn-quiet" download>
+              <a href={t.lang === 'es' ? '/cv/CV_Jose_Urdaneta_ES.pdf' : '/cv/CV_Jose_Urdaneta_EN.pdf'}
+                 className="btn btn-quiet" download
+                 onClick={() => track('descarga_cv', { idioma: t.lang, lugar: 'hero' })}>
                 <Icon name="doc" /> {t.hero.ctaCv}
               </a>
             </div>
@@ -151,7 +154,8 @@ function About({ t }) {
               />
               <figcaption>
                 <strong>{profile.name}</strong>
-                <a href={`https://wa.me/${profile.whatsapp}`} target="_blank" rel="noopener noreferrer">
+                <a href={`https://wa.me/${profile.whatsapp}`} target="_blank" rel="noopener noreferrer"
+                   onClick={() => track('contacto_whatsapp', { lugar: 'retrato' })}>
                   <WhatsAppIcon className="wa-glyph" /> {profile.phone}
                 </a>
                 <span>{profile.location}</span>
@@ -333,12 +337,14 @@ function Contact({ t }) {
         <p className="section-lead on-dark">{c.lead}</p>
 
         <div className="contact-grid">
-          <a className="contact-card" href={`mailto:${profile.email}`}>
+          <a className="contact-card" href={`mailto:${profile.email}`}
+             onClick={() => track('contacto_email')}>
             <Icon name="mail" />
             <span className="cc-label">{c.emailLabel}</span>
             <strong>{profile.email}</strong>
           </a>
-          <a className="contact-card" href={`https://wa.me/${profile.whatsapp}`} target="_blank" rel="noopener noreferrer">
+          <a className="contact-card" href={`https://wa.me/${profile.whatsapp}`} target="_blank" rel="noopener noreferrer"
+             onClick={() => track('contacto_whatsapp', { lugar: 'contacto' })}>
             <WhatsAppIcon className="wa-glyph cc-icon" />
             <span className="cc-label">{c.phoneLabel}</span>
             <strong>{profile.phone}</strong>
@@ -356,8 +362,10 @@ function Contact({ t }) {
         </div>
 
         <div className="cv-row">
-          <a className="btn btn-light" href="/cv/CV_Jose_Urdaneta_ES.pdf" download><Icon name="doc" /> {c.cvEs}</a>
-          <a className="btn btn-outline-light" href="/cv/CV_Jose_Urdaneta_EN.pdf" download><Icon name="doc" /> {c.cvEn}</a>
+          <a className="btn btn-light" href="/cv/CV_Jose_Urdaneta_ES.pdf" download
+             onClick={() => track('descarga_cv', { idioma: 'es', lugar: 'contacto' })}><Icon name="doc" /> {c.cvEs}</a>
+          <a className="btn btn-outline-light" href="/cv/CV_Jose_Urdaneta_EN.pdf" download
+             onClick={() => track('descarga_cv', { idioma: 'en', lugar: 'contacto' })}><Icon name="doc" /> {c.cvEn}</a>
         </div>
 
         <p className="contact-location"><Icon name="pin" /> {c.locationLabel}: {profile.location}</p>
